@@ -1,10 +1,6 @@
 package com.narxoz.rpg.quest;
 
 import java.util.List;
-
-/**
- * Traverses quests from newest arrival back to oldest arrival.
- */
 public class ReverseQuestIterator implements QuestIterator {
 
     private final List<Quest> snapshot;
