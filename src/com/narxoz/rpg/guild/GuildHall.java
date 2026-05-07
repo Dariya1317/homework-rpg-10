@@ -25,6 +25,10 @@ public class GuildHall implements GuildMediator {
         membersByTopic.computeIfAbsent(topic, key -> new ArrayList<>()).add(member);
     }
 
+    public int subscriberCount(String topic) {
+        return membersByTopic.getOrDefault(topic, List.of()).size();
+    }
+
     protected List<GuildMember> subscribersFor(String topic) {
         return membersByTopic.getOrDefault(topic, List.of());
     }
